@@ -1,0 +1,85 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<div>
+    <table style="font-family: Segoe UI, SegoeUIWF, Arial, sans-serif; font-size: 12px; color: #333333; border-spacing: 0; border-collapse: collapse; padding: 0; width: 580px; direction: ltr">
+        <tr style="background-color: #8c05a8">
+            <td align="center">
+                <img src="https://s2.loli.net/2022/05/14/HQbRi81Du6x2jgt.png" alt="logo" style="width: 64px;padding: 5px 0 0 0; ">
+                <table>
+                    <tr>
+                            <td style="font-size: 30px; color: #FFFFFF; padding:0 0 5px 0;text-align: center" >
+                                <span th:text="${toUser}"/> 同学，后台系统有新的订单
+                    </td>
+                    </tr>
+                </table>
+            </td>
+
+        <tr>
+        </tr>
+        </tr>
+        <tr>
+            <td style="padding: 30px 20px; border-bottom-style: solid; border-bottom-color: #8c05a8; border-bottom-width: 4px; ">
+                <table style="font-family: Segoe UI, SegoeUIWF, Arial, sans-serif; font-size: 12px; color: #333333; border-spacing: 0; border-collapse: collapse; width: 100%">
+                    <tr>
+                        <td style="font-size: 20px; padding: 0 0 5px 0;" align="center">
+                            <strong><span th:text="${order.campus.campusName}"/></strong> 校区的 <strong><span
+                                th:text="${order.name}"/></strong> 发起了预约，具体如下:
+                            <ul style="font-size: 14px; list-style:none; " align="left" >
+                                <li style="padding-top: 10px">
+                                    💻电脑机型： <span th:text="${order.brandModel}"/>
+                                </li>
+                                <br>
+                                <li>
+                                    🕹操作系统：<span th:text="${order.os}"/>
+                                </li>
+                                <br>
+                                <li>
+                                    🔧保修状态：<span th:text="${order.warranty==null? '未填写': order.warranty}"/>
+                                </li>
+                                <br>
+                                <li>
+                                    📢详细描述：
+                                    <blockquote style="display: inline-block;"><p><span th:text="${order.description}"/></p></blockquote>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="padding-bottom:10px">
+                请勿回复此邮件<br>请勿相信其中的链接
+                
+            </td>
+        </tr>
+        <tr padding-top="20px">
+            <td align="center" >
+                扫码关注公众号
+            </td>
+        </tr>
+        <tr >   
+            <td align="center" >
+            <img  src="https://s2.loli.net/2022/05/13/afq3jMiLIRsvlyr.png" alt="二维码" width="100px">
+            </td> 
+        </tr>
+        <tr>
+            <td style="font-size: 16px;padding: 10px 0 20px 0; text-align:center;" >
+                <a  href="https://itxia.club/" target="_blank" style="color: #0044CC;text-decoration: none;width:100px">社团主页</a>
+                &nbsp;|&nbsp; 
+                <a  href="https://nju.itxia.cn/wcms/login" target="_blank" style="color: #0044CC;text-decoration: none;width:100px">进入后台</a>
+                &nbsp;|&nbsp; 
+                <a href="mailto:njuitxia@outlook.com"  target="_blank" style="color: #0044CC;text-decoration: none;">联系我们</a>
+                &nbsp;|&nbsp;
+                <a href="https://www.yuque.com/itxia/help" target="_blank" style="color: #0044CC;text-decoration: none;">教程文档</a>
+            </td>
+        </tr>
+        <tr>
+            <td style="color: #B2B2B2; font-size: 12px;text-align:center;">
+                侠之大者为国为民，侠之小者为友为邻<br>©NJU-ITXIA
+              </td>
+          </tr>
+    </table>
+</div>
